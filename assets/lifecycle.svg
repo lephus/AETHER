@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="960" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">The AETHER lifecycle</title>
+  <desc id="desc">Six phases in order: Think, Specify, Design, Build, Verify, Ship. Failures found in Verify loop back to Build.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; text-anchor: middle; }
+    .kicker { font-size: 12px; font-weight: 600; letter-spacing: 3px; fill: #94A3B8; text-anchor: start; }
+    .route  { font-size: 12px; fill: #64748B; text-anchor: end; }
+    .num    { font-size: 16px; font-weight: 700; fill: #0B1020; }
+    .name   { font-size: 18px; font-weight: 700; fill: #F8FAFC; }
+    .sub    { font-size: 12px; fill: #94A3B8; }
+    .loop   { font-size: 12px; fill: #FDBA74; }
+    .chev   { fill: none; stroke: #64748B; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#1A1440"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" x2="1">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset=".2" stop-color="#3B82F6"/>
+      <stop offset=".4" stop-color="#22C55E"/>
+      <stop offset=".6" stop-color="#EAB308"/>
+      <stop offset=".8" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#EF4444"/>
+    </linearGradient>
+    <marker id="head" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 L8 5 L1 9" fill="none" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="280" rx="20" fill="url(#bg)"/>
+  <rect x="22" y="22" width="916" height="3" rx="1.5" fill="url(#rail)"/>
+  <text x="22" y="56" class="kicker">THE AETHER LIFECYCLE</text>
+  <text x="938" y="56" class="route">routed by using-aether</text>
+
+  <!-- 01 Think -->
+  <rect x="22" y="78" width="136" height="120" rx="14" fill="#8B5CF6" fill-opacity=".12" stroke="#8B5CF6" stroke-width="1.5"/>
+  <circle cx="90" cy="112" r="17" fill="#8B5CF6"/>
+  <text x="90" y="118" class="num">1</text>
+  <text x="90" y="156" class="name">Think</text>
+  <text x="90" y="178" class="sub">discovery · ideas</text>
+  <path class="chev" d="M164 132 L171 138 L164 144"/>
+
+  <!-- 02 Specify -->
+  <rect x="178" y="78" width="136" height="120" rx="14" fill="#3B82F6" fill-opacity=".12" stroke="#3B82F6" stroke-width="1.5"/>
+  <circle cx="246" cy="112" r="17" fill="#3B82F6"/>
+  <text x="246" y="118" class="num">2</text>
+  <text x="246" y="156" class="name">Specify</text>
+  <text x="246" y="178" class="sub">PRD · user stories</text>
+  <path class="chev" d="M320 132 L327 138 L320 144"/>
+
+  <!-- 03 Design -->
+  <rect x="334" y="78" width="136" height="120" rx="14" fill="#22C55E" fill-opacity=".12" stroke="#22C55E" stroke-width="1.5"/>
+  <circle cx="402" cy="112" r="17" fill="#22C55E"/>
+  <text x="402" y="118" class="num">3</text>
+  <text x="402" y="156" class="name">Design</text>
+  <text x="402" y="178" class="sub">UI · motion · data</text>
+  <path class="chev" d="M476 132 L483 138 L476 144"/>
+
+  <!-- 04 Build -->
+  <rect x="490" y="78" width="136" height="120" rx="14" fill="#EAB308" fill-opacity=".12" stroke="#EAB308" stroke-width="1.5"/>
+  <circle cx="558" cy="112" r="17" fill="#EAB308"/>
+  <text x="558" y="118" class="num">4</text>
+  <text x="558" y="156" class="name">Build</text>
+  <text x="558" y="178" class="sub">TDD · agents</text>
+  <path class="chev" d="M632 132 L639 138 L632 144"/>
+
+  <!-- 05 Verify -->
+  <rect x="646" y="78" width="136" height="120" rx="14" fill="#F97316" fill-opacity=".12" stroke="#F97316" stroke-width="1.5"/>
+  <circle cx="714" cy="112" r="17" fill="#F97316"/>
+  <text x="714" y="118" class="num">5</text>
+  <text x="714" y="156" class="name">Verify</text>
+  <text x="714" y="178" class="sub">QA · security</text>
+  <path class="chev" d="M788 132 L795 138 L788 144"/>
+
+  <!-- 06 Ship -->
+  <rect x="802" y="78" width="136" height="120" rx="14" fill="#EF4444" fill-opacity=".12" stroke="#EF4444" stroke-width="1.5"/>
+  <circle cx="870" cy="112" r="17" fill="#EF4444"/>
+  <text x="870" y="118" class="num">6</text>
+  <text x="870" y="156" class="name">Ship</text>
+  <text x="870" y="178" class="sub">deploy · monitor</text>
+
+  <!-- Verify → Build loop -->
+  <path d="M714 200 C714 244 558 244 558 206" fill="none" stroke="#F97316" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#head)"/>
+  <text x="636" y="262" class="loop">failures in Verify loop back to Build</text>
+</svg>
